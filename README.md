@@ -1,13 +1,12 @@
 ## Easy DB
-This simple and easy-to-use library comes with a few important functions to start storing data easier! It might 
-seem complicated to use at first, but it will be very easy to use after learning all the functions in the library.
+This simple and easy-to-use library comes with a few important functions to start storing data easier! It comes
+loaded with functions to read, write, and delete data. This doesn't require too much setup, but it still requires some
+user input and data to setup tables. Tables are made in JSON (JavaScript Object Notation), so they are very easy to
+read.
 
 ## Dependencies
 
 - Python 3.8 or above
-- The os module in Python (usually a built-in Python library)
-- The json module in Python (usually a built-in Python library)
-
 
 ## Docs
 
@@ -37,13 +36,12 @@ the variable being True
 
 ---
 
-##### `setup_table(self, args: list = None, already_set)`
+##### `setup_table(args, already_set)`
 
 **Use** \
 Sets up the table and sets the **set** attribute to True so that other methods in the table can be carried out.
 
 **Parameters**
-- self [ignored]: default parameter
 - already_set [type: bool, default: False]: if the table is already setup, set the value to True and ignore **args**
 - args [type: list, default: None]: should be ignored if table is already setup, if table is not setup, this is a list
 all the columns of the table
@@ -58,7 +56,7 @@ If table is set
 example.setup_table(already_set=True)
 ```
 ---
-##### `apdata(self, primary_key, args)`
+##### `apdata(primary_key, args)`
 
 **Use** \
 Can add and update rows of data using the primary key passed in.
@@ -78,7 +76,7 @@ example.apdata('Person1', ['John', 'Texas', 'US'])
 # adds data to a table with the primary key as "Person1"
 ```
 ---
-##### `get_keys(self, *key)`
+##### `get_keys(*key)`
 **Use** \
 Returns data from specific columns in the form of a dictionary.
 
@@ -92,7 +90,7 @@ print(data)
 # returns data from only the "name" and "state" column
 ```
 ---
-##### `get(self, primary_key)`
+##### `get(primary_key)`
 **Use** \
 Returns all the data that corresponds to a primary key in the dictionary.
 
@@ -105,7 +103,7 @@ data = example.get('Person1')
 print(data)
 ```
 ---
-##### `delete(self, primary_key)`
+##### `delete(primary_key)`
 **Use** \
 Deletes a row from the table, using the primary key to identify the row.
 
@@ -117,7 +115,7 @@ Deletes a row from the table, using the primary key to identify the row.
 example.delete('Person1')
 ```
 ---
-##### `req_args(self)`
+##### `req_args()`
 **Use** \
 Returns all the column names of the table.
 
@@ -130,7 +128,7 @@ arguments = example.req_args()
 print(arguments)
 ```
 ---
-##### `check_if_table_setup(self)`
+##### `check_if_table_setup()`
 **Use** \
 Checks if the table is setup and sets the set attribute to True.
 
@@ -145,7 +143,7 @@ None
 example.check_if_table_setup()
 ```
 ---
-##### `deltable(self)`
+##### `deltable()`
 **Use** \
 Deletes the table.
 
@@ -157,7 +155,7 @@ None
 example.deltable()
 ```
 ---
-##### `check_if_table_is_deleted(self)`
+##### `check_if_table_is_deleted()`
 **Use** \
 Checks if the table is deleted and sets the deleted attribute to True.
 
@@ -172,7 +170,7 @@ None
 example.check_if_table_is_deleted()
 ```
 ---
-##### `number_of_args(self)`
+##### `number_of_args()`
 **Use** \
 Returns the number of columns in the table.
 
@@ -185,7 +183,7 @@ number = example.number_of_args()
 print(number)
 ```
 ---
-##### `number_of_rows(self)`
+##### `number_of_rows()`
 **Use** \
 Returns the number of rows in the table.
 
