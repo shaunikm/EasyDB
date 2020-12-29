@@ -1,5 +1,5 @@
 ## Easy DB
-This simple and easy to use library comes with a few important functions to start storing data easier! It might 
+This simple and easy-to-use library comes with a few important functions to start storing data easier! It might 
 seem complicated to use at first, but it will be very easy to use after learning all the functions in the library.
 
 ## Dependencies
