@@ -10,16 +10,11 @@ read.
 
 ## Docs
 
-### Table(self, filename, tablename) | Class
+### Table(filename, tablename) | Class
 This is the table class, which holds all the information for one table.
 
-#### Example
-```python
-example = Table('example_file.json', 'Example Table')
-```
 #### Parameters
 
-- self [ignored]: default parameter
 - filename [type: string]: file the table will be or is stored in
 - tablename [type: string]: the name of your table
 
@@ -31,6 +26,11 @@ example = Table('example_file.json', 'Example Table')
 the variable being True
 - filename [type: string]: file the table will be or is stored in
 - tablename [type: string]: the name of your table
+
+#### Example
+```python
+example = Table('example_file.json', 'Example Table')
+```
 
 #### Methods
 
