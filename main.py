@@ -8,7 +8,6 @@ class Table:
         self.tablename = tablename
         self.deleted = False
         self.set = False
-        self.limits = []
 
     def setup_table(self, args: list = None, already_set: bool = False):
         if not already_set:
@@ -63,7 +62,7 @@ class Table:
         self.check_if_table_setup()
         self.check_if_table_is_deleted()
         data = json.load(open(self.filename))
-        return len(data['tabledata']['arguments'])
+        return data['tabledata']['arguments']
 
     def check_if_table_setup(self):
         if self.set:
@@ -83,9 +82,13 @@ class Table:
             raise AttributeError('Table has been deleted and does not exist anymore. Setup a new table.')
 
     def number_of_args(self):
+        self.check_if_table_setup()
+        self.check_if_table_is_deleted()
         data = json.load(open(self.filename))
         return len(data['tabledata']['arguments'])
 
     def number_of_rows(self):
+        self.check_if_table_setup()
+        self.check_if_table_is_deleted()
         data = json.load(self.filename)
         return len(data[self.tablename])
