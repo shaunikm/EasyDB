@@ -197,5 +197,4 @@ print(number)
 ```
 
 ## To-Do
-- Make a library for EasyDB
 - Make CLI using EasyDB functions and classes
