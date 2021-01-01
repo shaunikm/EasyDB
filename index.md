@@ -1,4 +1,3 @@
-## Easy DB
 This simple and easy-to-use library comes with a few important functions to start storing data easier! It comes
 loaded with functions to read, write, and delete data. This doesn't require too much setup, but it still requires some
 user input and data to setup tables. Tables are made in JSON (JavaScript Object Notation), so they are very easy to
