@@ -1,5 +1,2 @@
 .idea
 venv
-build
-dist
-EasyDatabase.egg-info
