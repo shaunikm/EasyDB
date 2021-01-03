@@ -8,6 +8,9 @@ read.
 
 - Python 3.8 or above
 
+## Installation
+```pip install EasyDatabase```
+
 ## Docs
 
 ### Table(filename, tablename) | Class
